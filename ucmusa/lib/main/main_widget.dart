@@ -227,8 +227,7 @@ class _MainWidgetState extends State<MainWidget> {
                                               EdgeInsets.fromLTRB(8, 0, 8, 0),
                                           child: InkWell(
                                             onTap: () async {
-                                              await launchURL(listViewEventsRecord
-                                                  .linkToSignup);
+                                              await launchURL('https://www.instagram.com/media.ucmusa/?hl=en');
                                             },
                                             child: Card(
                                               clipBehavior:

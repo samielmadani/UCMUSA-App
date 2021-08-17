@@ -6,6 +6,7 @@ import '../main.dart';
 import '../reset_password/reset_password_widget.dart';
 import '../sign_up/sign_up_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -313,6 +314,56 @@ class _LoginWidgetState extends State<LoginWidget> {
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
+                                      Padding(
+                                        padding:
+                                        EdgeInsets.fromLTRB(0, 0, 0, 10),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                          children: [
+                                            Align(
+                                              alignment: Alignment(0, 0),
+                                              child: FFButtonWidget(
+                                                onPressed: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                      builder: (context) =>
+                                                          NavBarPage(
+                                                              initialPage:
+                                                              'Main'),
+                                                    ),
+                                                  );
+                                                },
+                                                text: 'Guest',
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.userSecret,
+                                                  color: Colors.black,
+                                                  size: 20,
+                                                ),
+                                                options: FFButtonOptions(
+                                                  width: 120,
+                                                  height: 44,
+                                                  color: Colors.white,
+                                                  textStyle:
+                                                  GoogleFonts.getFont(
+                                                    'Roboto',
+                                                    color: Color(0xFF606060),
+                                                    fontSize: 17,
+                                                  ),
+                                                  elevation: 4,
+                                                  borderSide: BorderSide(
+                                                    color: Colors.transparent,
+                                                    width: 0,
+                                                  ),
+                                                  borderRadius: 40,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      ),
                                       InkWell(
                                         onTap: () async {
                                           await Navigator.pushAndRemoveUntil(
