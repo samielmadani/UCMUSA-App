@@ -22,76 +22,56 @@ class _$PrayerMonthRecordSerializer
     final result = <Object>[];
     Object value;
     value = object.image;
-    if (value != null) {
-      result
-        ..add('image')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.time;
-    if (value != null) {
-      result
-        ..add('time')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DateTime)));
-    }
-    value = object.month;
-    if (value != null) {
-      result
-        ..add('month')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.email;
-    if (value != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.displayName;
-    if (value != null) {
-      result
-        ..add('display_name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.photoUrl;
-    if (value != null) {
-      result
-        ..add('photo_url')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.uid;
-    if (value != null) {
-      result
-        ..add('uid')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.createdTime;
-    if (value != null) {
-      result
-        ..add('created_time')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DateTime)));
-    }
-    value = object.phoneNumber;
-    if (value != null) {
-      result
-        ..add('phone_number')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.reference;
-    if (value != null) {
-      result
-        ..add('Document__Reference__Field')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DocumentReference)));
-    }
-    return result;
+    result
+      ..add('image')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.time;
+    result
+      ..add('time')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DateTime)));
+      value = object.month;
+    result
+      ..add('month')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.email;
+    result
+      ..add('email')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.displayName;
+    result
+      ..add('display_name')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.photoUrl;
+    result
+      ..add('photo_url')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.uid;
+    result
+      ..add('uid')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.createdTime;
+    result
+      ..add('created_time')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DateTime)));
+      value = object.phoneNumber;
+    result
+      ..add('phone_number')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.reference;
+    result
+      ..add('Document__Reference__Field')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DocumentReference)));
+      return result;
   }
 
   @override
@@ -304,20 +284,18 @@ class PrayerMonthRecordBuilder
 
   PrayerMonthRecordBuilder get _$this {
     final $v = _$v;
-    if ($v != null) {
-      _image = $v.image;
-      _time = $v.time;
-      _month = $v.month;
-      _email = $v.email;
-      _displayName = $v.displayName;
-      _photoUrl = $v.photoUrl;
-      _uid = $v.uid;
-      _createdTime = $v.createdTime;
-      _phoneNumber = $v.phoneNumber;
-      _reference = $v.reference;
-      _$v = null;
-    }
-    return this;
+    _image = $v.image;
+    _time = $v.time;
+    _month = $v.month;
+    _email = $v.email;
+    _displayName = $v.displayName;
+    _photoUrl = $v.photoUrl;
+    _uid = $v.uid;
+    _createdTime = $v.createdTime;
+    _phoneNumber = $v.phoneNumber;
+    _reference = $v.reference;
+    _$v = null;
+      return this;
   }
 
   @override
@@ -328,7 +306,7 @@ class PrayerMonthRecordBuilder
 
   @override
   void update(void Function(PrayerMonthRecordBuilder) updates) {
-    if (updates != null) updates(this);
+    updates(this);
   }
 
   @override

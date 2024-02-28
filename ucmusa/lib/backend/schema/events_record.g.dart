@@ -21,55 +21,41 @@ class _$EventsRecordSerializer implements StructuredSerializer<EventsRecord> {
     final result = <Object>[];
     Object value;
     value = object.title;
-    if (value != null) {
-      result
-        ..add('title')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.header;
-    if (value != null) {
-      result
-        ..add('header')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.description;
-    if (value != null) {
-      result
-        ..add('description')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.date;
-    if (value != null) {
-      result
-        ..add('date')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.location;
-    if (value != null) {
-      result
-        ..add('location')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.linkToSignup;
-    if (value != null) {
-      result
-        ..add('LinkToSignup')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.reference;
-    if (value != null) {
-      result
-        ..add('Document__Reference__Field')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DocumentReference)));
-    }
-    return result;
+    result
+      ..add('title')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.header;
+    result
+      ..add('header')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.description;
+    result
+      ..add('description')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.date;
+    result
+      ..add('date')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.location;
+    result
+      ..add('location')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.linkToSignup;
+    result
+      ..add('LinkToSignup')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.reference;
+    result
+      ..add('Document__Reference__Field')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DocumentReference)));
+      return result;
   }
 
   @override
@@ -234,17 +220,15 @@ class EventsRecordBuilder
 
   EventsRecordBuilder get _$this {
     final $v = _$v;
-    if ($v != null) {
-      _title = $v.title;
-      _header = $v.header;
-      _description = $v.description;
-      _date = $v.date;
-      _location = $v.location;
-      _linkToSignup = $v.linkToSignup;
-      _reference = $v.reference;
-      _$v = null;
-    }
-    return this;
+    _title = $v.title;
+    _header = $v.header;
+    _description = $v.description;
+    _date = $v.date;
+    _location = $v.location;
+    _linkToSignup = $v.linkToSignup;
+    _reference = $v.reference;
+    _$v = null;
+      return this;
   }
 
   @override
@@ -255,7 +239,7 @@ class EventsRecordBuilder
 
   @override
   void update(void Function(EventsRecordBuilder) updates) {
-    if (updates != null) updates(this);
+    updates(this);
   }
 
   @override

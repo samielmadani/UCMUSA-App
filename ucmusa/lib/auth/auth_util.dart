@@ -46,15 +46,15 @@ Future resetPassword({String email, BuildContext context}) async {
   );
 }
 
-String get currentUserEmail => currentUser?.user?.email ?? '';
+String get currentUserEmail => currentUser.user?.email ?? '';
 
-String get currentUserUid => currentUser?.user?.uid ?? '';
+String get currentUserUid => currentUser.user?.uid ?? '';
 
-String get currentUserDisplayName => currentUser?.user?.displayName ?? '';
+String get currentUserDisplayName => currentUser.user?.displayName ?? '';
 
-String get currentUserPhoto => currentUser?.user?.photoURL ?? '';
+String get currentUserPhoto => currentUser.user?.photoURL ?? '';
 
-String get currentPhoneNumber => currentUser?.user?.phoneNumber ?? '';
+String get currentPhoneNumber => currentUser.user?.phoneNumber ?? '';
 
 // Set when using phone verification (after phone number is provided).
 String _phoneAuthVerificationCode;
@@ -120,6 +120,6 @@ Future verifySmsCode({
   }
 }
 
-DocumentReference get currentUserReference => currentUser?.user != null
+DocumentReference get currentUserReference => currentUser.user != null
     ? UsersRecord.collection.doc(currentUser.user.uid)
     : null;

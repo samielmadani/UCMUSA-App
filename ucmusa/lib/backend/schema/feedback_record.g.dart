@@ -22,34 +22,26 @@ class _$FeedbackRecordSerializer
     final result = <Object>[];
     Object value;
     value = object.message;
-    if (value != null) {
-      result
-        ..add('message')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.time;
-    if (value != null) {
-      result
-        ..add('time')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DateTime)));
-    }
-    value = object.email;
-    if (value != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.reference;
-    if (value != null) {
-      result
-        ..add('Document__Reference__Field')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DocumentReference)));
-    }
-    return result;
+    result
+      ..add('message')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.time;
+    result
+      ..add('time')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DateTime)));
+      value = object.email;
+    result
+      ..add('email')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.reference;
+    result
+      ..add('Document__Reference__Field')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DocumentReference)));
+      return result;
   }
 
   @override
@@ -166,14 +158,12 @@ class FeedbackRecordBuilder
 
   FeedbackRecordBuilder get _$this {
     final $v = _$v;
-    if ($v != null) {
-      _message = $v.message;
-      _time = $v.time;
-      _email = $v.email;
-      _reference = $v.reference;
-      _$v = null;
-    }
-    return this;
+    _message = $v.message;
+    _time = $v.time;
+    _email = $v.email;
+    _reference = $v.reference;
+    _$v = null;
+      return this;
   }
 
   @override
@@ -184,7 +174,7 @@ class FeedbackRecordBuilder
 
   @override
   void update(void Function(FeedbackRecordBuilder) updates) {
-    if (updates != null) updates(this);
+    updates(this);
   }
 
   @override

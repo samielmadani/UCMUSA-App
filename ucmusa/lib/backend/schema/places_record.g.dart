@@ -21,83 +21,61 @@ class _$PlacesRecordSerializer implements StructuredSerializer<PlacesRecord> {
     final result = <Object>[];
     Object value;
     value = object.title;
-    if (value != null) {
-      result
-        ..add('title')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.address;
-    if (value != null) {
-      result
-        ..add('address')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.image;
-    if (value != null) {
-      result
-        ..add('image')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.gps;
-    if (value != null) {
-      result
-        ..add('gps')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.email;
-    if (value != null) {
-      result
-        ..add('email')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.displayName;
-    if (value != null) {
-      result
-        ..add('display_name')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.photoUrl;
-    if (value != null) {
-      result
-        ..add('photo_url')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.uid;
-    if (value != null) {
-      result
-        ..add('uid')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.createdTime;
-    if (value != null) {
-      result
-        ..add('created_time')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DateTime)));
-    }
-    value = object.phoneNumber;
-    if (value != null) {
-      result
-        ..add('phone_number')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.reference;
-    if (value != null) {
-      result
-        ..add('Document__Reference__Field')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(DocumentReference)));
-    }
-    return result;
+    result
+      ..add('title')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.address;
+    result
+      ..add('address')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.image;
+    result
+      ..add('image')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.gps;
+    result
+      ..add('gps')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.email;
+    result
+      ..add('email')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.displayName;
+    result
+      ..add('display_name')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.photoUrl;
+    result
+      ..add('photo_url')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.uid;
+    result
+      ..add('uid')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.createdTime;
+    result
+      ..add('created_time')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DateTime)));
+      value = object.phoneNumber;
+    result
+      ..add('phone_number')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(String)));
+      value = object.reference;
+    result
+      ..add('Document__Reference__Field')
+      ..add(serializers.serialize(value,
+          specifiedType: const FullType(DocumentReference)));
+      return result;
   }
 
   @override
@@ -324,21 +302,19 @@ class PlacesRecordBuilder
 
   PlacesRecordBuilder get _$this {
     final $v = _$v;
-    if ($v != null) {
-      _title = $v.title;
-      _address = $v.address;
-      _image = $v.image;
-      _gps = $v.gps;
-      _email = $v.email;
-      _displayName = $v.displayName;
-      _photoUrl = $v.photoUrl;
-      _uid = $v.uid;
-      _createdTime = $v.createdTime;
-      _phoneNumber = $v.phoneNumber;
-      _reference = $v.reference;
-      _$v = null;
-    }
-    return this;
+    _title = $v.title;
+    _address = $v.address;
+    _image = $v.image;
+    _gps = $v.gps;
+    _email = $v.email;
+    _displayName = $v.displayName;
+    _photoUrl = $v.photoUrl;
+    _uid = $v.uid;
+    _createdTime = $v.createdTime;
+    _phoneNumber = $v.phoneNumber;
+    _reference = $v.reference;
+    _$v = null;
+      return this;
   }
 
   @override
@@ -349,7 +325,7 @@ class PlacesRecordBuilder
 
   @override
   void update(void Function(PlacesRecordBuilder) updates) {
-    if (updates != null) updates(this);
+    updates(this);
   }
 
   @override

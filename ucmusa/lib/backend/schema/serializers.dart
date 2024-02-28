@@ -43,13 +43,13 @@ class DocumentReferenceSerializer
 
   @override
   Object serialize(Serializers serializers, DocumentReference reference,
-      {FullType specifiedType: FullType.unspecified}) {
+      {FullType specifiedType = FullType.unspecified}) {
     return reference;
   }
 
   @override
   DocumentReference deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType: FullType.unspecified}) =>
+          {FullType specifiedType = FullType.unspecified}) =>
       serialized as DocumentReference;
 }
 
@@ -61,13 +61,13 @@ class DateTimeSerializer implements PrimitiveSerializer<DateTime> {
 
   @override
   Object serialize(Serializers serializers, DateTime dateTime,
-      {FullType specifiedType: FullType.unspecified}) {
+      {FullType specifiedType = FullType.unspecified}) {
     return dateTime;
   }
 
   @override
   DateTime deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType: FullType.unspecified}) =>
+          {FullType specifiedType = FullType.unspecified}) =>
       serialized as DateTime;
 }
 
@@ -80,13 +80,13 @@ class LatLngSerializer implements PrimitiveSerializer<LatLng> {
 
   @override
   Object serialize(Serializers serializers, LatLng location,
-      {FullType specifiedType: FullType.unspecified}) {
+      {FullType specifiedType = FullType.unspecified}) {
     return location;
   }
 
   @override
   LatLng deserialize(Serializers serializers, Object serialized,
-          {FullType specifiedType: FullType.unspecified}) =>
+          {FullType specifiedType = FullType.unspecified}) =>
       serialized as LatLng;
 }
 
@@ -107,7 +107,7 @@ Map<String, dynamic> mapFromFirestore(Map<String, dynamic> data) =>
 Map<String, dynamic> mapToFirestore(Map<String, dynamic> data) =>
     data.map((key, value) {
       if (value is LatLng) {
-        value = (value as LatLng).toGeoPoint();
+        value = (value).toGeoPoint();
       }
       return MapEntry(key, value);
     });

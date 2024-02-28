@@ -8,7 +8,7 @@ class UcmusaFirebaseUser {
 }
 
 UcmusaFirebaseUser currentUser;
-bool get loggedIn => currentUser?.loggedIn ?? false;
+bool get loggedIn => currentUser.loggedIn ?? false;
 Stream<UcmusaFirebaseUser> ucmusaFirebaseUserStream() => FirebaseAuth.instance
     .authStateChanges()
     .debounce((user) => user == null && !loggedIn
